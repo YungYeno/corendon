@@ -1,0 +1,51 @@
+/* de body van de website design. */
+/* overflow en overflow y heb ik verborgen gemaakt zodat de website kan niet gescrold worden. */
+/* 1vh; is dezelfde als 1%; vh staat voor viewport height */
+/* ik heb de achtergrond image gelinkt naar de image folder en ik wilde niet dat mijn foto mee scrollt. */
+
+.body {
+    margin: 0px;
+    font-family: Sans-serif;
+    overflow: hidden;
+    overflow-y: hidden;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-image: url(../image/5.jpg);
+    background-repeat: none;
+    
+}
+
+/* een box gemaakt waar de video in kom te staan. */
+.videobox {
+    border-style: border-box;
+    align-items: center;
+    width: 500px;
+    height: 350px;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
+    font-family: Sans-serif;
+    
+}
+
+/* een box waar de video in zit en wordt gespeeld. */
+.box {
+    position: center;
+    padding: 20px;
+    font-family: Sans-serif;
+}
+  /* foto box onder de video */  
+.foto{
+    margin-top: 50px;
+    width: 400px;
+    height: 200px;
+    border: border-box;
+    font-family: Sans-serif;
+    
+    
+    
+}
+
+

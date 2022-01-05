@@ -1,0 +1,68 @@
+/* hier wordt de toolbalk gestyled. */
+/* flex wordt gebruikt om alles de zelfde lengte te geven */
+/* justofy-content is gedaan om evenveel space te geven tussen de boxen . */
+/* opacity maakt het balk transparent*/
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px;
+    background-color: red;
+    opacity: 0.8;
+    
+    width: 350px;
+}
+/* flex wordt gebruikt om alles de zelfde lengte te geven */
+.left-side {
+    display: flex;
+}
+/* alle div in nav-wrapper en left-side krijgen de front hooghte en wordt uppercase en moet 20pixels naar rechts gaan */
+/* 0.9em is 0.9 x de normale size van de front */
+.nav-wrapper > .left-side > div {
+    margin-right: 20px;
+    front-size: 0.9em;
+    text-transform: uppercase; 
+}
+/* de hoogte van de pagina links en hoe moet het uitzien */
+/* transition is voor wanner de muis op de links zit dan moet de links een onderbalkje krijgen */
+.nav-link-wrappper {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border 0.5s;
+    
+}
+/* welke kleur moet de links zijn waneer de muis erop is en de dikte, 900 is bold */
+.nav-link-wrapper a {
+    color: white;
+    front-weight: 900;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+/* krijgt witte balkje onder de links wanneer de muis erop staat */
+.nav-link-wrapper:hover {
+    border-bottom: 1px solid white;
+}
+/* wordt ander kleur waneer de muis erop zweefd */
+.nav-link-wrapper a:hover {
+    color: white;
+}
+/* de rechte kant van de toolbalk krijgt uppercase */
+.right-side{
+    text-transform: uppercase;
+}
+/* krijgt witte balkje onder de links */
+.right-side a {
+    color: white;
+    front-weight: 900;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+/* krijgt witte balkje wanneer de muis erop zweefd */
+.right-side:hover {
+    border-bottom: 1px solid white;
+}
+/* wordt wite kleur waneer de muis erop zweefd */
+.right-side a:hover {
+    color: white;
+}
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- in welke taal wordt geprogrammeerd -->
+<html lang="eu">
+<!-- het hoofd van het html -->
+<head>
+<!-- welke charset wordt gebruikt. in deze situatie is het utf -->
+<meta charset="utf-8">
+<!-- de titel van de pagina -->
+<title>FAQ</title>
+<!-- een link naar de toolbar css -->
+<link rel="stylesheet" href="static/css/faq.css"/>
+<!-- css connection naar html -->
+<link rel="stylesheet" href="static/css/toolbar2.css"/>
+</head>
+<!-- de body van de html en de class waar ik de design deed in de CSS -->
+<body class="body">
+       <!-- de link balk waar de pagina wordt gelinkt naar de andere pagina  -->
+       <!-- heb het design in css gedaan zodat alles boven en naast elkaar komt te staan en ook het zwevende effect -->
+        <div class="nav-wrapper">
+           <!-- dit is zodat de link naar linksboven blijven staan ook gestyle in css -->
+            <div class="left-side">
+               <!-- een class gemaakt voor de link, hoe zal de link reageren als de muis erop zit en ook voor beter spacing tussen de boven links link. -->
+               <div class="nav-link-wrapper">
+                  <!-- link naar de video pagina -->
+                   <a href="{{ url_for('projecten') }}">Contact</a>
+               </div>
+                  <!-- de link naar een andere pagina gestyled en positie gegeven in css -->
+                   <div class="nav-link-wrapper">
+                       <!-- de link naar de overons page -->
+                       <a href="{{ url_for('register') }}"></a>
+                   </div>
+                   <div class="nav-link-wrapper">
+                      <!-- link naar de form pagina -->
+                       <a href="{{ url_for('form1') }}"></a>
+                       </div>
+                   <!-- de link naar de hoofdmenu -->
+                   <div class="nav-link-wrapper">
+                       <a href="{{ url_for('home')}}"></a>
+
+              
+                   </div>      
+                   <div class="nav-link-wrapper">
+                      
+                   </div> 
+        </div>
+        <!-- zorg dat de login link naar login pagina recht boven een positie krijgt-->
+        <div class="right-side">
+            <a href="{{ url_for('login')}}">Login</a>
+        
+        </div>
+    </div>
+    <!-- zorg dat de video in het midden komt te staan en dat de video gelinkt is naar mijn dropbox. ook design in css. -->
+    <div class="videobox">
+       <div class="box">
+        <iframe src="static/image/6.mp4", autoplay="true" height="300" width="450" type="video/mp4">
+        </iframe>>
+        <!-- foto gezet onder de video en is gestyled in css-->
+        <center>
+            <img class="foto" src="static/image/7.png">
+        </center>
+        </div>
+    </div>
+    </body>
+</html>

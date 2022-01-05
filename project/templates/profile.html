@@ -1,16 +1,79 @@
-{% extends "base.html" %}
-
-{% block content %}
-<h1 class="title">
-  Welcome, {{ name }} !
-</h1>
-
-<div class="column is-4 is-offset-4">
-    <div class="box">
-<!--  On user page, display some user info-->
-      <p>E-mail : {{ email }}</p>
-      <p>Flightnumber : {{ flightnumber }}</p>
-      <p>Seatnumber : {{ seatnumber }}</p>
+<!-- defineer de bestaand type -->
+<!DOCTYPE html>
+<!-- welke taal wordt gebruikt voor deze site -->
+<html lang="eu">
+<head>
+<!-- welke charset wordt gebruikt. in deze situatie is het utf -->
+<meta charset="utf-8">
+<!-- de titel van de pagina -->
+<title>profiel</title>
+<!-- de link tussen css en html -->
+<link rel="stylesheet" href="static/css/toolbar2.css"/>
+<link rel="stylesheet" href="static/css/profile.css"/>
+</head>
+<!-- de body van de html en de class waar ik de design deed in de CSS -->
+<body class="body">
+       <!-- de link balk waar de pagina wordt gelinkt naar de andere pagina  -->
+       <!-- heb het design in css gedaan zodat alles boven en naast elkaar komt te staan en ook het zwevende effect -->
+        <div class="nav-wrapper">
+           <!-- dit is zodat de link naar linksboven blijven staan ook gestyle in css -->
+            <div class="left-side">
+               <!-- een class gemaakt voor de link, hoe zal de link reageren als de muis erop zit en ook voor beter spacing tussen de boven links link. -->
+                <div class="nav-link-wrapper">
+                   <!-- link naar de video pagina -->
+                    <a href="{{ url_for('projecten') }}">FAQ</a>
+                </div>
+                   <!-- de link naar een andere pagina gestyled en positie gegeven in css -->
+                    <div class="nav-link-wrapper">
+                        <!-- de link naar de overons page -->
+                        <a href="{{ url_for('overons') }}">contact</a>
+                    </div>
+                    <div class="nav-link-wrapper">
+                       <!-- link naar de form pagina -->
+                        <a href="{{ url_for('form1') }}"></a>
+                        </div>
+                    <!-- de link naar de hoofdmenu -->
+                    <div class="nav-link-wrapper">
+                        <a href="{{ url_for('home')}}"></a>
+                    </div>
+                    
+        </div>
+        <!-- een claas gemaakt voor de recht boven link en ook effecten erbij gezet hoe zal het reageren als de muis erop is -->
+        <div class="right-side">
+            <a href="{{ url_for('auth.logout')}}">Logout</a>
+        </div>
+        
     </div>
-</div>
-{% endblock %}
+    
+      <!-- een class gemaakt voor de username veld waar de naam komt erin te staan. -->
+       <div class="user">
+           <!-- id="result" roept het javascript localstorage waar de username wordt overgedragen. -->
+           {% extends "base.html" %}
+           {% block content %}
+           <h1 class="title">
+               Welcome, {{ name }} !
+            </h1>   
+        </div>
+
+
+        <!-- een class gemaakt voor het bericht box om te zeggen waar moet de box staan en hoe moet het eruit zien  -->
+        <div class="msg">
+            <h1>Uw gegevens:</h1>
+        </div>
+        <!-- hier heb ik de iframe gebruikt om de de map van goegle te tonen en ik heb het in een class gedaan zodat ik kan het mooi designen en de zwevende effect toevoegen.  -->
+        <h1>U bent vertrokken vanaf Schiphol </h1>
+        <iframe class="map"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156115.2703674135!2d4.628198716406244!3d52.31053860000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5e134e0fd162d%3A0xc7d51583f1cef188!2sAmsterdam%20Airport%20Schiphol!5e0!3m2!1snl!2snl!4v1641079908686!5m2!1snl!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <br></br>
+    <!-- een class gemaakt voor het bericht box om te zeggen waar moet de box staan en hoe moet het eruit zien  -->
+    <div class="msg2">
+        <p>E-mail : {{ email }}</p>
+        <p>Flightnumber : {{ flightnumber }}</p>
+        <p>Seatnumber : {{ seatnumber }}</p>
+    </div>
+    <!-- ik heb hier onder het javascript gekoppeld omdat de box waar de data komt te staan  altijd eerst geladen moet worden.  -->
+   
+    {% endblock %}
+
+    </body>
+    
+    </html>

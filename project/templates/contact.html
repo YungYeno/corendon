@@ -1,0 +1,75 @@
+<!-- definieer het bestand type -->
+<!DOCTYPE html>
+<!-- welke taal wordt gebruikt voor deze site  -->
+<html lang="eu">
+<!-- het hoofd van het html -->
+<head>
+<!-- welke charset wordt gebruikt. In deze situatie is het utf-8 de standaard -->
+<meta charset="utf-8">
+<!-- het title van het pagina -->
+<title>Contact</title>
+<!-- de link tussen css en html -->
+<link rel="stylesheet" href="static/css/toolbar2.css"/>
+<link rel="stylesheet" href="static/css/contact.css"/>
+</head>
+<!-- de body van de html en de class waar ik de design deed in de CSS -->
+<body class="body">
+       <!-- de link balk waar de pagina wordt gelinkt naar de andere pagina  -->
+       <!-- heb het design in css gedaan zodat alles boven en naast elkaar komt te staan en ook het zwevende effect -->
+        <div class="nav-wrapper">
+           <!-- dit is zodat de link naar linksboven blijven staan ook gestyle in css -->
+            <div class="left-side">
+               <!-- een class gemaakt voor de link, hoe zal de link reageren als de muis erop zit en ook voor beter spacing tussen de boven links link. -->
+                <!-- de link naar een andere pagina gestyled en positie gegeven in css -->
+                <div class="nav-link-wrapper">
+                    <!-- link naar de video pagina -->
+                     <a href="{{ url_for('projecten') }}">FAQ</a>
+                 </div>
+                    <!-- de link naar een andere pagina gestyled en positie gegeven in css -->
+                     <div class="nav-link-wrapper">
+                         <!-- de link naar de overons page -->
+                         <a href="{{ url_for('register') }}">Sign up</a>
+                     </div>
+                     <div class="nav-link-wrapper">
+                        <!-- link naar de form pagina -->
+                         <a href="{{ url_for('form1') }}"></a>
+                         </div>
+                     <!-- de link naar de hoofdmenu -->
+                     <div class="nav-link-wrapper">
+                         <a href="{{ url_for('home')}}"></a>
+
+                
+                     </div>      
+                     <div class="nav-link-wrapper">
+                        
+                     </div>            
+            </div>
+        
+        <!-- een class gemaakt waar de login link moet komen staan rechts boven. -->
+            <div class="right-side">
+                <a href="{{ url_for('login') }}">Login</a>
+            </div>        
+        </div>
+    </div>
+    <!-- een class gemaakt waar de box in het midden komt te staan. en ik deed de box in een box(container)  om de titel van de tekst in het midden te zetten.-->
+    <div class="box">
+    <div class="container">
+    
+        <h1>Telefonisch contact<h1>
+        </div>
+        <p>Onze ervaren, enthousiaste en professionele reisadviseurs helpen u graag met het vinden van uw vakantie!</p><p>U kunt 7 dagen per week telefonisch contact met ons opnemen via 023 7510606</p>
+        <p>Vanuit het buitenland bereikt u ons via +31 237510606</p>
+        <p>Maandag t/m vrijdag: 09.00 - 21.00 uur</p>
+        <p>Zaterdag: 09.00 - 18.00 uur</p>
+        <p>Zondag: 10.00 - 18.00 uur</p>
+            
+        <p>Let op: Tijdens de feestdagen hebben wij afwijkende openingstijden. 31 december 2021 zijn wij tussen 09.00 - 17.00 uur bereikbaar. 1 januari 2022 zijn wij gesloten. Contact via de live chat Via de live chat op de website kunt u in contact komen met een van onze reisadviseurs. Zodra zij beschikbaar zijn op de chat, ziet u aan de linkerkant van uw scherm een pop-up (venster) verschijnen. U kunt hier meteen uw vraag stellen en zo het chatgesprek beginnen.
+Social Media
+
+Ook de medewerkers van het webcare team zijn u graag van dienst. Via Facebook, Twitter en Instagram staan zij 7 dagen per week voor u klaar om al uw vragen te beantwoorden. Van maandag tot en met vrijdag van 09.00 tot 18.00 uur. Op zaterdag van 09.00 tot 18.00 uur en op zondag van 10.00 tot 18.00 uur. Via Facebook krijgt u binnen 24 uur een reactie.
+Veelgestelde vragen
+
+Op de pagina veelgestelde vragen vindt u vrijwel alle antwoorden op vragen met betrekking tot het boeken van uw vakantie. Staat de door u gewenste informatie er niet bij, neemt u dan contact op met ons Contact Center.</p>
+        </div>
+    </body>
+</html>

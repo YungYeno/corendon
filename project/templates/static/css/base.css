@@ -1,0 +1,63 @@
+/* de body van de website design. */
+/* overflow en overflow y heb ik verborgen gemaakt zodat de website kan niet gescrold worden. */
+/* 1vh; is dezelfde als 1%; vh staat voor viewport height */
+/* ik heb de achtergrond image gelinkt naar de image folder en ik wilde niet dat mijn foto mee scrollt. */
+
+.body {
+    margin: 0px;
+    overflow: hidden;
+    overflow-y: hidden;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-image: url(../image/4.jpg);
+    background-repeat: none;
+    font-family: Sans-serif;
+}
+
+/* een tekst box met een max grootte van 960pixels, moet in het midden van de html zitten, background zwart en de tekst moet 10pixels van de rand zijn */
+.box {
+    max-width: 960px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    opacity: 0.8;
+    margin-top: 100px;
+    padding: 10px;
+    font-family: Sans-serif;
+}
+/* h1 moet bold zijn in het midden en de kleur wit */
+.box h1 {
+    color: white;
+    font-weight: 900;
+    text-align: center;
+    font-family: Sans-serif;
+
+}
+/* p moet wit zijn */
+.box p {
+    color: white;
+    font-family: Sans-serif;
+
+}
+/* de tekst box in de tekst box moet in het midden zijn 10 pixels van de rand */
+.container {
+    align-items: center;
+    padding-left: 10px;
+    font-family: Sans-serif;
+}
+/* h1 moet bold zijn in het midden en de kleur wit en 180px groot */
+.container h1 {
+    text-align: center;
+    font-weight: 900;
+    color: white;
+    font-family: Sans-serif;
+}
+/* p moet wit zijn met 55px groot */
+.container p {
+    font-weight: 700;
+    color: white;
+    font-family: Sans-serif;
+}
+

@@ -1,0 +1,145 @@
+/* de body van de website design. */
+/* overflow en overflow y heb ik verborgen gemaakt zodat de website kan niet gescrold worden. */
+/* 1vh; is dezelfde als 1%; vh staat voor viewport height */
+/* ik heb de achtergrond image gelinkt naar de image folder en ik wilde niet dat mijn foto mee scrollt. */
+.body {
+    margin:  0;
+    font-family: Sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: hidden;
+}
+/* text box in het midden zetten met de hoogte, breedte en achtergrond kleur */
+.box {
+    border: border-box;
+    width: 400px;
+    padding: 5px;
+    font-family: Sans-serif;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    opacity: 0.9;
+    outline-style: groove;
+    outline-color: black;
+    
+}
+/* een box alleen voor de titel van het bericht, in het midden zetten van de box */
+.container {
+    align-items: center;
+    padding-left: 5px;
+    
+}
+/* H1 moet in het midden komen en moet dik gedrukt zijn met grote letters. de kleur moet wit zijn */
+.container h1 {
+    text-align: center;
+    font-family: Sans-serif;
+    font-weight: 900;
+    color: black;
+}
+/* p kleine letters en ook medium bold */
+.container p {
+    font-weight: 700;
+    font-family: Sans-serif;
+    color: black;
+}
+/* hoe moet de footer eruit zien, bold in het midden en de grootte */
+.footer {
+    text-align: center;
+    font-weight: 900;
+    color: black;
+    padding-top: 10%;
+}
+/* een box voor de tekst box met 100% hoogte en in het midden staan */
+.v-header{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    
+    
+}
+/*  het video vast zetten in de achtergrond en 100% breed en 100% hoogte mag niet scrollen*/
+.fullscreen-video-wrap{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+/* de size van het video */
+.fullscreen-video-wrap video{
+    min-height:100%;
+    min-width:100%;
+}
+
+.form{
+    
+    width: 400px;
+}
+.control{
+    margin-left: 40px;
+    width: 300px;
+    padding: 5px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+.control2{
+    float: right;
+    margin-right: 70px;
+    margin-top: 18px;
+    
+    
+}
+.control2 p{
+    font-weight: 600;
+    font-size: small;
+    float: right;
+    margin-top: 0px;
+    padding-left: 5px;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    
+}
+.text{
+    text-align: center;
+    font-weight: 900;
+    font-size: large;
+    
+}
+.control3{
+    text-align: center;
+    margin-top: 80px;
+    
+    
+    
+
+}
+.text h1{
+    text-align: center;
+    font-family: Sans-serif;
+    font-weight: 900;
+    color: black;
+}
+.form input[type="email"], input[type="text"]{
+    width: 100px;    
+    background: solid;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    height: 20px;
+    color:rgb(0, 0, 0);
+    outline: none;
+    border: none;
+}
+.button{
+    width: 150px;
+    height: 35px;
+    text-transform: uppercase;
+    font-weight: 800;
+    border-radius: 10px;
+}
+.button:hover {
+    cursor: pointer;
+    background: darkred;
+    color: white;
+    opacity: 0.5;
+}
