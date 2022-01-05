@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="static/css/toolbar2.css"/>
 </head>
 <!-- de body van de html en de class waar ik de design deed in de CSS -->
+{ % block content % }
 <body class="body">
        <!-- de link balk waar de pagina wordt gelinkt naar de andere pagina  -->
        <!-- heb het design in css gedaan zodat alles boven en naast elkaar komt te staan en ook het zwevende effect -->
@@ -56,10 +57,10 @@
             </div>
                     
         </div>
-    </div>
+
     <!-- een class gemaakt waar de box in het midden komt te staan. en ik deed de box in een box(container)  om de titel van de tekst in het midden te zetten.-->
     <div class="box">
-        <div class="container".>
+        <div class="container">
             <h1>
             {% block content %}
             {% endblock %}
