@@ -1,0 +1,16 @@
+/*Prerout alle connectie die binnen komt via de hotspot naar de website op de flask applicatie*/
+sudo iptables -t nat -A PREROUTING -p tcp -m tcp --dport 80 -j DNAT --to-destination 127.0.0.1:5000
+sudo iptables -t nat -A PREROUTING -p tcp -m tcp --dport 443 -j DNAT --to-destination 127.0.0.1:5000
+sudo iptables -t nat -A PREROUTING -i wlan0ap -p tcp -m tcp --dport 80 -j DNAT --to-destination 127.0.0.1:5000
+sudo iptables -t nat -A PREROUTING -i wlan0ap -p tcp -m tcp --dport 443 -j DNAT --to-destination 127.0.0.1:5000
+
+/*alls de bovende niet werkt, komt het door de wifi driver dan moet je dit command uitvoeren */
+sudo iptables -t nat -A PREROUTING -i wlan0 -p tcp -m tcp --dport 80 -j DNAT --to-destination 127.0.0.1:5000
+sudo iptables -t nat -A PREROUTING -i wlan0 -p tcp -m tcp --dport 443 -j DNAT --to-destination 127.0.0.1:5000
+
+/*Protect tegen Ddos, float en twee andere cyberaanval*/
+sudo iptables -t mangle -A PREROUTING -p tcp -m tcp --tcp-flags FIN,SYN FIN,SYN -j DROP
+sudo iptables -t mangle -A PREROUTING -p tcp -m tcp --tcp-flags SYN,RST SYN,RST -j DROP
+
+/*Om iptables-rules te hertellen met de iptables.txt moet je deze command uitvoeren vanaf de locatie waar het bestaan iptables.txt is.*/
+sudo iptables-restore < iptables.txt
