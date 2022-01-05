@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="static/css/toolbar.css">
 </head>
 <!-- een class gemaakt voor de video in de achtergrond en de tekst moet vooraan staan. design is in css -->
+{ % block content % }
 <header class="v-header">
         <div class="fullscreen-video-wrap">
          <video src="static/image/1.mp4", muted="true" autoplay="true" loop="true"></video>
@@ -59,7 +60,7 @@
                        
                        </div>
                        </div>
-                       <br></br>
+                       <br>
                        <form class="form" method="POST" action="/login">
                            <div class="text">
                                <p>Welkom bij Corendon</p>
@@ -67,8 +68,8 @@
                                {% if messages %}
                                {{ messages[0] }}
                            </div>
-                           {% endif %}
-                           {% endwith %}
+                                {% endif %}
+                                {% endwith %}
                            <div class="control">
                                <input type="email" name="email" placeholder="Uw e-mail" autofocus="">
                            </div>
@@ -85,10 +86,10 @@
                             
                             <div class="control3">
                                 <button class="button">Login</button>
-                            </di>
+                            </div>
                         </form>
                        </div>
-                       <br></br>
+                       <br>
                        <!-- een box onder de title box waar de text kom erin staan -->
                        <div class="container">
                        

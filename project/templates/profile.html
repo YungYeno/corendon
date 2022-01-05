@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="static/css/profile.css"/>
 </head>
 <!-- de body van de html en de class waar ik de design deed in de CSS -->
+{ % block content % }
 <body class="body">
        <!-- de link balk waar de pagina wordt gelinkt naar de andere pagina  -->
        <!-- heb het design in css gedaan zodat alles boven en naast elkaar komt te staan en ook het zwevende effect -->
@@ -62,8 +63,8 @@
         </div>
         <!-- hier heb ik de iframe gebruikt om de de map van goegle te tonen en ik heb het in een class gedaan zodat ik kan het mooi designen en de zwevende effect toevoegen.  -->
         <h1>U bent vertrokken vanaf Schiphol </h1>
-        <iframe class="map"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156115.2703674135!2d4.628198716406244!3d52.31053860000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5e134e0fd162d%3A0xc7d51583f1cef188!2sAmsterdam%20Airport%20Schiphol!5e0!3m2!1snl!2snl!4v1641079908686!5m2!1snl!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    <br></br>
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156115.2703674135!2d4.628198716406244!3d52.31053860000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5e134e0fd162d%3A0xc7d51583f1cef188!2sAmsterdam%20Airport%20Schiphol!5e0!3m2!1snl!2snl!4v1641079908686!5m2!1snl!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <br>
     <!-- een class gemaakt voor het bericht box om te zeggen waar moet de box staan en hoe moet het eruit zien  -->
     <div class="msg2">
         <p>E-mail : {{ email }}</p>
