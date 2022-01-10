@@ -1,0 +1,17 @@
+#################Https SSL########################
+sudo su
+a2enmod ssl
+systemctl restart apache2
+#####################################################################################
+zet de corendon-ssl.conf in /etc/apache2/site-avalieble/
+############################################################################################
+cd /etc/apache2/
+mkdir ssl
+cd ssl
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/https.local.key -out /etc/apache2/ssl/https.local.crt
+########################################################################################################################################
+vul alles in.
+Bij Common Name invoer: projectteam.local 
+#######################################################
+a2ensite corendon-ssl.conf
+systemctl reload apache2
