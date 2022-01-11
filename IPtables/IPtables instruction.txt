@@ -1,9 +1,10 @@
 apt-get install iptables-persistent
-#######veranderd 192.168.4.1 met je eigen ipadress#########
-sudo iptables -t nat -A OUTPUT -d 127.0.0.1 -j DNAT --to-destination 192.168.4.1:80
-sudo iptables -t nat -A PREROUTING -p tcp -m tcp --dport 80 -j DNAT --to-destination 192.168.4.1:5000
-sudo iptables -t nat -A PREROUTING -p tcp -m tcp --dport 443 -j DNAT --to-destination 192.168.4.1:5000
-sudo iptables -t nat -A PREROUTING -p tcp -s 1.1.1.2 --dport 80 -j DNAT --to-destination 192.168.4.1:80
+#######veranderd 192.168.4.1 met je eigen ipadress en port#########
+sudo iptables -t NAT -A PREROUTING -i wlan0 -p tcp --dport 80 -j DNAT --to-destination 192.168.4.1:8080
+sudo iptables -t nat -A OUTPUT -d 127.0.0.1 -j DNAT --to-destination 192.168.4.1:8080
+sudo iptables -t nat -A PREROUTING -p tcp -m tcp --dport 80 -j DNAT --to-destination 192.168.4.1:8080
+sudo iptables -t nat -A PREROUTING -p tcp -m tcp --dport 443 -j DNAT --to-destination 192.168.4.1:8080
+sudo iptables -t nat -A PREROUTING -p tcp -s 1.1.1.2 --dport 80 -j DNAT --to-destination 192.168.4.1:8080
 ####################### bescherming tegen Ddos en andere #######################################################
 sudo iptables -t nat -A PREROUTING -p tcp -m tcp --tcp-flags FIN,SYN FIN,SYN -j DROP
 sudo iptables -t nat -A PREROUTING -p tcp -m tcp --tcp-flags SYN,RST SYN,RST -j DROP
@@ -14,11 +15,12 @@ sudo iptables-save
 ################################Handmatig invoeren#####################################################
 sudo nano /etc/iptables/rules.v4
 ***************************** zet dit in de file***********************************************************
-#######veranderd 192.168.4.1 met je eigen ipadress#########
+#######veranderd 192.168.4.1 met je eigen ipadress en port#########
+-A PREROUTING -i wlan0 -p tcp --dport 80 -j DNAT --to-destination 192.168.4.1:8080
 -A OUTPUT -d 127.0.0.1 -j DNAT --to-destination 192.168.4.1:80
--A PREROUTING -p tcp -m tcp --dport 80 -j DNAT --to-destination 192.168.4.1:5000
--A PREROUTING -p tcp -m tcp --dport 443 -j DNAT --to-destination 192.168.4.1:5000
--A PREROUTING -p tcp -s 1.1.1.2 --dport 80 -j DNAT --to-destination 192.168.4.1:80
+-A PREROUTING -p tcp -m tcp --dport 80 -j DNAT --to-destination 192.168.4.1:8080
+-A PREROUTING -p tcp -m tcp --dport 443 -j DNAT --to-destination 192.168.4.1:8080
+-A PREROUTING -p tcp -s 1.1.1.2 --dport 80 -j DNAT --to-destination 192.168.4.1:8080
 
 ####################### bescherming tegen Ddos en andere #######################################################
 -A PREROUTING -p tcp -m tcp --tcp-flags FIN,SYN FIN,SYN -j DROP
